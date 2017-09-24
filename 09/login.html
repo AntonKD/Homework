@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+
+<head>
+    <style>
+        .error{
+            color:red;
+
+        }
+        .form-row {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+
+
+    <form action="index.php" method="post">
+
+        <div class="form-row">
+
+        <input type="text" name="login" value="">
+
+        <?php if(isset($errors['login'])):?>
+        <p class="error"> <?=$errors['login'] ?></p>
+        <?php endif;?>
+
+
+        <input type="password" name="password" value=" ">
+
+        <?php if(isset($errors['password'])):?>
+        <p class="error"> <?=$errors['password'] ?></p>
+        <?php endif;?>
+
+         <input type="submit" name="submit_login" value="Войти">
+         <input type="submit" name="submit_regist" value="Зарегистрироваться">
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>
