@@ -6,7 +6,7 @@
 
             static $calls = 0;
             $calls++;
-           return $calls;
+            return $calls;
             //echo $calls;
         }
 
@@ -57,18 +57,11 @@
 
             } else { echo 'Ведите текст'."</br>";}
 
-            //Создаем массив для замены
-
-
-
-            // $name = '__construct';
-            //   $this->$name;
-
         }
     }
 
 
-//echo $counter;
+
 if(!empty($_POST['submit'])) {
     $text = $_POST['text1'];
     $var_text=str_split($text);
@@ -82,11 +75,7 @@ if(!empty($_POST['submit'])) {
     $class_convert_text->myvar = $text;
 
     $class_convert_text->convert_text();
-    $vars = get_defined_vars();
-    $counter = 0;
-    foreach($vars as $var){
-        $var instanceof change_name?$counter++:false;
-    }
+
 
 
 }
